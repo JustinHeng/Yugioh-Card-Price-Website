@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Yugioh</title>
+		<title>Yugioh Phantom</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="static/assets/css/main.css" />
@@ -22,19 +22,23 @@
 
 							<!-- Logo -->
 								<a href="/" class="logo">
-									<span class="symbol"><img src="static/images/logo.svg" alt="home" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="static/images/logo.svg" alt="home" /></span><span class="title">Yugioh Phantom</span>
 								</a>
 
-								<ul>
-									<li style="display:inline"><a href="/">Home</a></li>
-									<li style="display:inline"><a href="watchlist">Watchlist</a></li>
-									<li style="display:inline"><a href="search">Search</a></li>
-								</ul>
+								<div>
+									<a href="/">Home</a>
+									<a href="watchlist">Watchlist</a>
+									<p><br></p>
+									{% comment %} <li style="display:inline"><a href="search">Search</a></li> {% endcomment %}
+								</div>
+
+								<div></div>
 
 								<div>
-									<form action="/action_page.php">
-										<input type="text" placeholder="Search..." name="search">
-										<button type="submit"><i class="fa fa-search"></i></button>
+									<form action="search">
+										<button style="float: left; margin-right: 20px;" type="submit"><i class="fa fa-search"></i></button>
+										<input style="width: 600px" type="text" placeholder="Search..." name="fname">
+										
 									</form>
 								</div>
 

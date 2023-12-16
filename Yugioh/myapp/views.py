@@ -11,7 +11,8 @@ def home(request):
 
 def search(request):
     #cards = Cards.objects.all()
-    yugioh = requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=solfachord").json()
+    query = request.GET.get("fname")
+    yugioh = requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=" + query).json()
     return render(request, "search.html", {"yugioh": yugioh})
 
 def watchlist(request):
