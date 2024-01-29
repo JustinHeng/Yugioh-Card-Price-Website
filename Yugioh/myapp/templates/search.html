@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<p>Search Results</p>
+<p>Search Results for "{{query}}"</p>
 <ul>
 	{% for i in yugioh.data %}
 	<li style="list-style-type:none">
 		<img src="https://images.ygoprodeck.com/images/cards/{{ i.id }}.jpg" alt="card" width="69" height="100">
 		{{i.name}}: 
-		{% for j in i.card_sets%}
-			${{j.set_price}}, 
+		{% for j in i.card_prices%}
+			${{j.tcgplayer_price}}
 		{% endfor %}
+
 	</li>
 	{% endfor %}
 </ul>

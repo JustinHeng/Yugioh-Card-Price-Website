@@ -13,7 +13,7 @@ def search(request):
     #cards = Cards.objects.all()
     query = request.GET.get("fname")
     yugioh = requests.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=" + query).json()
-    return render(request, "search.html", {"yugioh": yugioh})
+    return render(request, "search.html", {"yugioh": yugioh, "query": query})
 
 def watchlist(request):
     return render(request, "watchlist.html")
